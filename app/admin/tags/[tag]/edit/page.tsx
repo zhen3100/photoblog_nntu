@@ -32,7 +32,7 @@ export default async function PhotoPageEdit({
   return (
     <AdminChildPage
       backPath={PATH_ADMIN_TAGS}
-      backLabel="Tags"
+      backLabel="Теги"
       breadcrumb={<AdminTagBadge {...{ tag, count, hideBadge: true }} />}
     >
       <AdminTagForm {...{ tag, photos }}>

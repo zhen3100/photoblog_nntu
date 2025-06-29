@@ -72,7 +72,10 @@ export default function ImageWithFallback({
         ...props,
         ref: imgRef,
         priority,
-        className: classNameImage,
+        className: clsx(
+          classNameImage,
+          'rounded-sm',
+        ),
         onLoad,
         onError,
       }} />

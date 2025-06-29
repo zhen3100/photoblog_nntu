@@ -54,6 +54,7 @@ export default function PhotoMedium({
               'text-white bg-black/25 backdrop-blur-xs',
               'animate-fade-in',
               'z-10',
+              
             )}>
               <Spinner size={20} color="text" />
             </div>}

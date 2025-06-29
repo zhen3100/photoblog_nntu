@@ -6,7 +6,6 @@ import Link from 'next/link';
 import AppGrid from '../components/AppGrid';
 import AppViewSwitcher, { SwitcherSelection } from '@/app/AppViewSwitcher';
 import {
-  PATH_ADMIN_RECIPES,
   PATH_ROOT,
   isPathAdmin,
   isPathFeed,
@@ -46,9 +45,8 @@ export default function Nav({
     linkOrAction: string | (() => void),
   ) =>
     typeof linkOrAction === 'string'
-      ? <Link href={linkOrAction} >{text}</Link>
-      : <button onClick={linkOrAction}
->{text}</button>;
+      ? <Link href={linkOrAction}>{text}</Link>
+      : <button onClick={linkOrAction}>{text}</button>;
 
   const switcherSelectionForPath = (): SwitcherSelection | undefined => {
     if (pathname === PATH_ROOT) {
@@ -76,10 +74,10 @@ export default function Nav({
               key="nav"
               ref={ref}
               className={clsx(
-                'w-full flex items-center bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 ',
+                'w-full flex items-center bg-main',
                 NAV_HEIGHT_CLASS,
                 // Enlarge nav to ensure it fully masks underlying content
-                'lg:w-[calc(100%+8px)] lg:translate-x-[-4px] lg:px-[4px]',
+                'md:w-[calc(100%+8px)] md:translate-x-[-4px] md:px-[4px]',
                 classNameStickyNav,
               )}>
               <AppViewSwitcher
@@ -90,16 +88,37 @@ export default function Nav({
                 'hidden xs:block',
                 'translate-y-[-1px]',
               )}>
-                <div className="truncate overflow-hidden select-none font-semibold text-[15px] text-text-blue ">
-                  {renderLink(navTitleOrDomain, PATH_ADMIN_RECIPES)}
-                </div>
-                {NAV_CAPTION &&
+<div className="flex items-center justify-between relative w-full py-2 px-4">
+  {/* Центральный текст - абсолютное позиционирование */}
+  <div className="absolute left-1/2 transform -translate-x-[60%] w-full max-w-[80%] px-4 text-center">
+    <a 
+      href='/about' 
+      className="font-semibold text-xs xs:text-sm sm:text-base text-text-blue hover:text-gray-700 dark:text-white whitespace-nowrap truncate inline-block w-full"
+    >
+      Фотоархив Леонарда Тимофеевича Крюкова
+    </a>
+  </div>
+
+  {/* Картинка - теперь справа с отступом */}
+  <div className="ml-auto z-10 flex-shrink-0">
+    <img 
+      src="/favicons/zhdan.png"  
+      alt="Логотип Ждановец" 
+      className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full block dark:hidden" 
+    />
+    <img 
+      src="/favicons/zhdan.svg"  
+      alt="Логотип Ждановец" 
+      className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full hidden dark:block" 
+    />
+  </div>
+</div>
                   <div className={clsx(
                     'hidden sm:block truncate overflow-hidden',
                     'leading-tight text-dim',
                   )}>
-                    {NAV_CAPTION}
-                  </div>}
+          
+                  </div>
               </div>
             </nav>]
             : []}

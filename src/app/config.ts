@@ -12,7 +12,7 @@ export const SHOULD_PREFETCH_ALL_LINKS: boolean | undefined = undefined;
 
 // TEMPLATE META
 
-export const TEMPLATE_TITLE = 'О проекте';
+export const TEMPLATE_TITLE = 'Галлерея фоток Ждановец';
 export const TEMPLATE_DESCRIPTION = 'Здесь хранятся фотки из Ждановца';
 
 // SOURCE CODE

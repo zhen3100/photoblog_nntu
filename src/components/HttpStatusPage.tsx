@@ -30,7 +30,7 @@ export default function HttpStatusPage({
             href={PATH_ROOT}
             className="text-main"
           >
-            Return Home
+            Вернуться на главную
           </Link>
         </div>
       </div>

@@ -78,9 +78,7 @@ export default function RootLayout({
     >
       <body className={clsx(
         // Center on large screens
-        '3xl:flex flex-col items-center ',
-        'bg-[url(/favicons/nntu.png)]'
-
+        '3xl:flex flex-col items-center',
       )}>
         <AppStateProvider>
           <AppTextProvider>
@@ -90,17 +88,14 @@ export default function RootLayout({
                 <div className={clsx(
                   'mx-3 mb-3',
                   'lg:mx-6 lg:mb-6',
-                  'bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 rounded-xl',
-                  'lg:w-[calc(75%+8px)] lg:translate-x-[-4px] lg:px-[4px]',
                 )}>
-                  <Nav navTitleOrDomain={NAV_TITLE_OR_DOMAIN} 
-                  />
+                  <Nav navTitleOrDomain={NAV_TITLE_OR_DOMAIN} />
                   <main>
                     <ShareModals />
                     <RecipeModal />
                     <div className={clsx(
-                      'min-h-[16rem] sm:min-h-[30rem] ',
-                      'mb-12 ',
+                      'min-h-[16rem] sm:min-h-[30rem]',
+                      'mb-12',
                       'space-y-5',
                     )}>
                       <AdminUploadPanel
