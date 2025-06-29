@@ -158,7 +158,7 @@
 /* Background */
 @utility bg-main {
   @apply
-    bg-white dark:bg-black
+    bg-[#F4F6FC] dark:bg-[#010618]
 }
 @utility bg-medium {
   @apply

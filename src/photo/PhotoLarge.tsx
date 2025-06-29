@@ -477,7 +477,11 @@ export default function PhotoLarge({
                 </div>
               </div>
             </DivDebugBaselineGrid>
+        
+
           </MaskedScroll>
+
+          
         </div>}
     />
   );

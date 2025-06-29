@@ -16,7 +16,7 @@ export default function NotFound() {
         {pathname}
       </span>
       {' '}
-      could not be found
+      Ой, кажется вы попали не туда
     </HttpStatusPage>
   );
 }

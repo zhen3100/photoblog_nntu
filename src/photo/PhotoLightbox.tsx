@@ -44,7 +44,7 @@ export default function PhotoLightbox({
             <div className="text-[1.1rem] lg:text-[1.5rem]">
               +{countNotShown}
             </div>
-            <div className="text-dim">More</div>
+
           </Link>
           : undefined}
         small

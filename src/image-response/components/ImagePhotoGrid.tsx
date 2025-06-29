@@ -69,6 +69,7 @@ export default function ImagePhotoGrid({
           }}
         >
           <img {...{
+            
             src: getNextImageUrlForRequest({
               imageUrl: url,
               size: nextImageWidth,
@@ -82,7 +83,8 @@ export default function ImagePhotoGrid({
               },
               objectFit: 'cover',
             },
-          }} />
+          }} 
+          />
         </div>,
       )}
     </div>

@@ -155,10 +155,10 @@ export default function InfinitePhotoScroll({
         )}
       >
         {error
-          ? 'Try Again'
+          ? 'Попробуйте еще раз'
           : isLoadingOrValidating
             ? <Spinner size={20} />
-            : 'Load More'}
+            : 'Загрузить больше'}
       </button>
     </div>;
 
