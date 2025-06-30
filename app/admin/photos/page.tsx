@@ -27,7 +27,7 @@ export default async function AdminPhotosPage() {
   ] = await Promise.all([
     getPhotos({
       hidden: 'include',
-      sortBy: 'createdAt',
+      sortBy: 'createdAtAsc',
       limit: INFINITE_SCROLL_INITIAL_ADMIN_PHOTOS,
     }).catch(() => []),
     getPhotosMetaCached({ hidden: 'include'})
