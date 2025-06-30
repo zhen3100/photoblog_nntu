@@ -136,16 +136,16 @@ export const getWheresFromOptions = (
 
 export const getOrderByFromOptions = (options: GetPhotosOptions) => {
   const {
-    sortBy = 'takenAt'
+    sortBy = 'createdAt'
   } = options;
 
   switch (sortBy) {
   case 'createdAt':
-    return 'ORDER BY created_at DESC';
+    return 'ORDER BY created_at ASC';
   case 'createdAtAsc':
     return 'ORDER BY created_at ASC';
   case 'takenAt':
-    return 'ORDER BY taken_at DESC';
+    return 'ORDER BY taken_at ASC';
   }
 };
 
